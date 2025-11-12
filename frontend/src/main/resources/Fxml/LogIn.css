@@ -1,0 +1,78 @@
+/* ===== BLOODLINK LOGIN THEME ===== */
+
+.root, .anchor-pane {
+    -fx-background-color: linear-gradient(to bottom right, #8B0000, #B22222, #DC143C);
+}
+
+/* Card box */
+.card {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30 40 30 40;
+    -fx-spacing: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);
+    -fx-min-width: 400;
+    -fx-max-width: 400;
+}
+
+/* Header section */
+.header-box {
+    -fx-padding: 10 0 5 0;
+    -fx-alignment: CENTER;
+}
+
+/* Bigger, bolder title */
+.page-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+    -fx-text-alignment: center;
+}
+
+/* Subtitle */
+.subtitle {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15px;
+    -fx-text-fill: #8B0000;
+}
+
+/* Form section (aligned left) */
+.form-section {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 0 10 20;
+}
+
+/* Labels */
+.label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+/* Text fields */
+.text-field {
+    -fx-pref-width: 300;
+    -fx-pref-height: 35;
+    -fx-border-color: #ffb3b3;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: #fffafa;
+    -fx-prompt-text-fill: #a8a8a8;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #e60000, #b30000);
+    -fx-text-fill: white;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-pref-width: 180;
+    -fx-pref-height: 42;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff4d4d, #b30000);
+}

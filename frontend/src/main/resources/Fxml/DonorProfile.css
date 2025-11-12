@@ -1,0 +1,99 @@
+﻿/* ===== DONOR PROFILE FORM THEME ===== */
+.root, .anchor-pane {
+    -fx-background-color: linear-gradient(to right, #8B0000, #B22222, #9E1B32);
+}
+
+.card-wrapper {
+    -fx-padding: 10;
+}
+
+.card {
+    -fx-background-color: #fff7f7;
+    -fx-padding: 30 40 40 40;
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.35), 18, 0, 0, 12);
+    -fx-max-width: 900;
+}
+
+.title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.subtitle {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15px;
+    -fx-text-fill: #8B0000;
+}
+
+.section-label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a4a4a;
+}
+
+.section-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.field-label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5c5c5c;
+}
+
+.text-input, .combo-input, .date-input, .time-input {
+    -fx-pref-width: 320;
+    -fx-pref-height: 36;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0b4b4;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 4 10 4 10;
+}
+
+.combo-input .list-cell {
+    -fx-background-color: white;
+}
+
+.slider-value {
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a1a;
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to bottom, #e60000, #a50000);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 30 10 30;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff4d4d, #a50000);
+}
+
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #a50000;
+    -fx-border-radius: 10;
+    -fx-text-fill: #a50000;
+    -fx-padding: 10 26 10 26;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.secondary-button:hover {
+    -fx-background-color: rgba(165,0,0,0.1);
+}
+
+.status-label {
+    -fx-text-fill: #2b7a0b;
+    -fx-font-weight: bold;
+}

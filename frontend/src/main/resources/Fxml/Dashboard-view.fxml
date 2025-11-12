@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.frontend.Controller.DashboardController"
+            stylesheets="@Dashboard.css"
+            prefWidth="900" prefHeight="600"
+            styleClass="anchor-pane">
+
+    <StackPane alignment="CENTER"
+               AnchorPane.topAnchor="200"
+               AnchorPane.bottomAnchor="200"
+               AnchorPane.leftAnchor="0"
+               AnchorPane.rightAnchor="0">
+
+        <!-- Main Card -->
+        <VBox alignment="CENTER" spacing="40" styleClass="card">
+
+            <!-- Header -->
+            <Label text="Select your Role" styleClass="page-title"/>
+
+            <!-- Buttons Section -->
+            <HBox alignment="CENTER" spacing="30">
+                <Button text="Donor" onAction="#selectDonor" styleClass="button"/>
+                <Button text="Recipient" onAction="#selectRecipient" styleClass="button"/>
+            </HBox>
+
+            <!-- Logout at the bottom of the white box -->
+            <VBox alignment="BOTTOM_CENTER">
+                <Button text="Logout" onAction="#handleLogout" styleClass="logout-btn"/>
+            </VBox>
+
+        </VBox>
+    </StackPane>
+</AnchorPane>

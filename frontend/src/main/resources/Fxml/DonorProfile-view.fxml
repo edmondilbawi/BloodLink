@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.frontend.Controller.DonorProfileController"
+            stylesheets="@DonorProfile.css"
+            prefWidth="1100" prefHeight="650"
+            styleClass="anchor-pane">
+
+    <StackPane AnchorPane.topAnchor="20"
+               AnchorPane.bottomAnchor="20"
+               AnchorPane.leftAnchor="20"
+               AnchorPane.rightAnchor="20"
+               styleClass="card-wrapper">
+
+        <VBox alignment="TOP_LEFT" spacing="20" styleClass="card">
+
+            <!-- Header -->
+            <VBox spacing="5">
+                <Label text="Fill Information" styleClass="title"/>
+                <Label text="Provide the latest donor availability details" styleClass="subtitle"/>
+                <Separator/>
+            </VBox>
+
+            <!-- Donor ID -->
+            <VBox spacing="6">
+                <Label text="Donor ID" styleClass="section-label"/>
+                <TextField fx:id="donorIdField" promptText="Enter donor ID" styleClass="text-input"/>
+            </VBox>
+
+            <GridPane hgap="25" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" percentWidth="50"/>
+                    <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" percentWidth="50"/>
+                </columnConstraints>
+
+                <!-- Left column -->
+                <VBox spacing="10" GridPane.columnIndex="0">
+                    <Label text="Donor Profile Information" styleClass="section-title"/>
+                    <Label text="Blood Type" styleClass="field-label"/>
+                    <ComboBox fx:id="bloodTypeCombo" promptText="Select blood type" styleClass="combo-input"/>
+
+                    <Label text="Rhesus Factor" styleClass="field-label"/>
+                    <ComboBox fx:id="rhesusCombo" promptText="Select rhesus factor" styleClass="combo-input"/>
+
+                    <Label text="Availability" styleClass="field-label"/>
+                    <ComboBox fx:id="availabilityCombo" promptText="Select status" styleClass="combo-input"/>
+
+                    <Label text="Preferred Donation Radius" styleClass="field-label"/>
+                    <VBox spacing="6">
+                        <Slider fx:id="radiusSlider" min="5" max="100" value="25" blockIncrement="5"/>
+                        <Label fx:id="radiusValueLabel" text="25 km" styleClass="slider-value"/>
+                    </VBox>
+                </VBox>
+
+                <!-- Right column -->
+                <VBox spacing="10" GridPane.columnIndex="1">
+                    <Label text="Date of Birth" styleClass="field-label"/>
+                    <DatePicker fx:id="dateOfBirthPicker" promptText="DD / MM / YYYY" styleClass="date-input"/>
+
+                    <Label text="Do Not Disturb" styleClass="field-label"/>
+                    <HBox spacing="10">
+                        <DatePicker fx:id="dndDatePicker" promptText="DD / MM / YYYY" styleClass="date-input"/>
+                        <TextField fx:id="dndTimeField" promptText="HH:MM" styleClass="time-input" maxWidth="90"/>
+                    </HBox>
+
+                    <Label text="Home Address" styleClass="field-label"/>
+                    <TextField fx:id="homeAddressField" promptText="Enter home address" styleClass="text-input"/>
+
+                    <Label text="Available By" styleClass="field-label"/>
+                    <HBox spacing="10">
+                        <DatePicker fx:id="availableByDatePicker" promptText="DD / MM / YYYY" styleClass="date-input"/>
+                        <TextField fx:id="availableByTimeField" promptText="HH:MM" styleClass="time-input" maxWidth="90"/>
+                    </HBox>
+
+                    <Label text="Last Donation" styleClass="field-label"/>
+                    <DatePicker fx:id="lastDonationDatePicker" promptText="DD / MM / YYYY" styleClass="date-input"/>
+                </VBox>
+            </GridPane>
+
+            <HBox spacing="15" alignment="CENTER_RIGHT">
+                <Label fx:id="statusLabel" text="" styleClass="status-label"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Back" onAction="#handleBack" styleClass="secondary-button"/>
+                <Button text="Submit" onAction="#handleSubmit" styleClass="primary-button"/>
+            </HBox>
+        </VBox>
+    </StackPane>
+</AnchorPane>

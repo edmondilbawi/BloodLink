@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.frontend.Controller.SignUpController"
+            stylesheets="@SignUp.css"
+            prefWidth="900" prefHeight="600"
+            styleClass="anchor-pane">
+
+    <StackPane alignment="CENTER"
+               AnchorPane.topAnchor="90"
+               AnchorPane.bottomAnchor="90"
+               AnchorPane.leftAnchor="0"
+               AnchorPane.rightAnchor="0">
+
+        <VBox alignment="TOP_CENTER" spacing="20" styleClass="card">
+
+            <!-- Header -->
+            <VBox alignment="CENTER" spacing="5" styleClass="header-box">
+                <Label text="Join BloodLink" styleClass="page-title"/>
+                <Label text="Create an account to donate or request blood" styleClass="subtitle"/>
+            </VBox>
+
+            <!-- Form Section -->
+            <VBox alignment="CENTER_LEFT" spacing="10" styleClass="form-section">
+
+                <HBox alignment="CENTER_LEFT" spacing="3">
+                    <Label text="Full Name" styleClass="label"/>
+                    <Label text="*" styleClass="mandatory-label"/>
+                </HBox>
+                <TextField fx:id="fullNameField" promptText="Enter your full name" styleClass="text-field"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="3">
+                    <Label text="Email" styleClass="label"/>
+                    <Label text="*" styleClass="mandatory-label"/>
+                </HBox>
+                <TextField fx:id="emailField" promptText="Enter your email" styleClass="text-field"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="3">
+                    <Label text="Phone" styleClass="label"/>
+                    <Label text="*" styleClass="mandatory-label"/>
+                </HBox>
+                <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="text-field"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="3">
+                    <Label text="Password" styleClass="label"/>
+                    <Label text="*" styleClass="mandatory-label"/>
+                </HBox>
+                <PasswordField fx:id="passwordField" promptText="Create your password" styleClass="text-field"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="3">
+                    <Label text="Home Address" styleClass="label"/>
+                    <Label text="*" styleClass="mandatory-label"/>
+                </HBox>
+                <TextField fx:id="homeAddressField" promptText="Enter your address" styleClass="text-field"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="3">
+                    <Label text="Blood Type" styleClass="label"/>
+                    <Label text="*" styleClass="mandatory-label"/>
+                </HBox>
+                <ComboBox fx:id="bloodTypeCombo" styleClass="text-field"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="3">
+                    <Label text="Rhesus" styleClass="label"/>
+                    <Label text="*" styleClass="mandatory-label"/>
+                </HBox>
+                <ComboBox fx:id="rhesusCombo" styleClass="text-field"/>
+            </VBox>
+
+            <!-- Buttons -->
+            <VBox alignment="CENTER" spacing="8">
+                <Button text="Register" onAction="#handleSignUp" styleClass="button"/>
+                <Button text="Back to Login" onAction="#goToLogin" styleClass="button"/>
+            </VBox>
+        </VBox>
+    </StackPane>
+</AnchorPane>

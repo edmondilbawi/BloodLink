@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.frontend.Controller.LogInController"
+            stylesheets="@LogIn.css"
+            prefWidth="900" prefHeight="600"
+            styleClass="anchor-pane">
+
+    <StackPane alignment="CENTER"
+               AnchorPane.topAnchor="90"
+               AnchorPane.bottomAnchor="150"
+               AnchorPane.leftAnchor="0"
+               AnchorPane.rightAnchor="0">
+
+        <!-- Main Card -->
+        <VBox alignment="TOP_CENTER" spacing="20" styleClass="card">
+
+            <!-- Header Section -->
+            <VBox alignment="CENTER" spacing="5" styleClass="header-box">
+                <Label text="Welcome Back to BloodLink" styleClass="page-title"/>
+                <Label text="Log in to access your account" styleClass="subtitle"/>
+            </VBox>
+
+            <!-- Form Section -->
+            <VBox alignment="CENTER_LEFT" spacing="10" styleClass="form-section">
+
+                <Label text="Email" styleClass="label"/>
+                <TextField fx:id="emailField" promptText="Enter your email" styleClass="text-field"/>
+
+                <Label text="Password" styleClass="label"/>
+                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="text-field"/>
+
+            </VBox>
+
+            <!-- Buttons -->
+            <VBox alignment="CENTER" spacing="8">
+                <Button text="Login" onAction="#handleLogin" styleClass="button"/>
+                <Button text="Create Account" onAction="#goToSignUp" styleClass="button"/>
+            </VBox>
+        </VBox>
+    </StackPane>
+</AnchorPane>
